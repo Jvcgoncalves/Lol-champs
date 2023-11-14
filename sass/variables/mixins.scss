@@ -2,21 +2,21 @@
   font-family: $font-family;
   font-size: $font-size;
   color: $font-color;
-}
+} // Mixin that i used to manipulate all texts
 
 @mixin font-gradient($angle , $color-one, $percent-color-one, $color-two, $percent-color-two){
   background: linear-gradient(180deg,$color-one $percent-color-one, $color-two $percent-color-two);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} // Gradient config that i used at all projects  
 
 @mixin error-messages(){
   position: fixed;
   width: 100%;
   height: 100vh;
-text-align: center;
+  text-align: center;
   p {
     @include font-styles($second-font, 3rem ,$font-color);
   }
-}
+} // Error messages config to use less lines 

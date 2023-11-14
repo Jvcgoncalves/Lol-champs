@@ -11,9 +11,23 @@ body{
   position: relative;
 }
 
+// Scroll-bar
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: $btn-color; 
+  height: 8rem;
+}
+::-webkit-scrollbar-track {
+  background-color: $font-color;
+}
+
 .hide{
   display: none !important; 
 }
+
+// Loader spinner to show when something is being processed
 
 .spinner-border-div{
   position: fixed;
@@ -27,11 +41,13 @@ body{
   }
 
 }
+
+// error messages config
 #error-message,#error-champ-not-found-message{
   @include error-messages();
 }
 
-
+// header config
 .header{
   width: 100%;
   height: 7rem;
@@ -41,17 +57,17 @@ body{
   left: 0;
   z-index: 1000;
 
-  .navbar{
+  .navbar{ // nav bar config
     height: 100%;
     width: 90%;
     
-    .search-champs{
+    .search-champs{ // search input div config
 
-      .search-button{
-        font-size: 1.2rem;
+      .search-button{ // Search button
+        font-size: 1.2rem; // using bootstrap icons, and because of it i manipulate the magnifying glass icon like a text 
       }
 
-      .search-champs-input{
+      .search-champs-input{ // Input area config
         width: 24.125rem;
         height: 2.5rem;
         border-radius: 1.25rem;
@@ -62,53 +78,56 @@ body{
     
   }
 
-  .logo{
+  .logo{ // site logo
     width: 5rem;
     height: 5rem;
   }
 }
 
-.container{
+.container{ // main container with all champs
   max-width: 90%;
   position: relative;
-  top: 8rem;
+  top: 6.5rem;
 
-  #headline-text{
-    @include font-styles($second-font, 3rem ,$font-color);
-    @include font-gradient(90deg , #785A28, 0%, #C89B3C, 100%)
+  #headline-text{ // site name 
+    @include font-styles($second-font, 3rem ,$font-color);  // font config
+    @include font-gradient(90deg , #785A28, 0%, #C89B3C, 100%) // gradient
   }
 
   #all-champs{
-    flex-wrap: wrap
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
   }
 
-  .champs-divs{
+  .champs-divs{ // Global config to all champ divs
     width: 20rem;
-    height: 27rem;
+    height: 26rem;
     background-color: $box-color;
+    border-bottom: .2rem solid $second-color;
 
-    .champ-images{
+    .champ-images{ // config images
       width: 100%;
-      height: 15rem;
+      height: 14rem;
     }
 
     .text-div-content{
       
-      h3{
+      h3{ // champ name
         @include font-styles($second-font, 2.4rem ,$font-color);
       }
 
-      figcaption{
+      figcaption{ // champ blurb
         @include font-styles($main-font, 1.1rem ,$font-color);
         opacity: .8;
       }
     }
 
-    .see-more-button{
+    .see-more-button{ // button to see more infomations about champ config
       width: 12.6875rem;
-      height: 2.875rem;
+      height: 2.5rem;
       background-color: $btn-color;
-      @include font-styles($main-font, 1.25rem ,#fff);
+      @include font-styles($main-font, 1.25rem ,#fff); // font config
     }
   }
 }

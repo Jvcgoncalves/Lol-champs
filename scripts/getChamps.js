@@ -9,11 +9,11 @@ export async function createElement(champ){
   } 
   // Create main div
   const mainDiv = document.createElement('div')
-  mainDiv.className = 'champs-divs rounded mb-5'
+  mainDiv.className = 'champs-divs rounded-top mb-5'
   mainDiv.setAttribute('data-champ-id', champ.id)
   // Create a figure with text content about champ
   const textElementsFigure = document.createElement('figure') 
-  textElementsFigure.className = 'text-div-content px-3 py-1'
+  textElementsFigure.className = 'text-div-content px-3 py-1 '
 
   // Create a blockquote with figcaption to name and champ title
   const blockquote = document.createElement('blockquote')
@@ -41,7 +41,7 @@ export async function createElement(champ){
   buttonDiv.classList = 'd-flex justify-content-center align-itens-center'
 
   const button = document.createElement('button')
-  button.className = 'btn btn-primary see-more-button'
+  button.className = 'btn btn-primary see-more-button d-flex align-items-center justify-content-center'
   button.textContent = 'Saber mais'
 
   buttonDiv.appendChild(button)

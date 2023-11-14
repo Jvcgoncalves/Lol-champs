@@ -6,11 +6,19 @@
 
 }
 
+@media (max-width: 1124px){
+  .container{
+    #all-champs{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+}
+
 @media (max-width: 768px){
 
   .container{
     #all-champs{
-      justify-content: center !important;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -40,6 +48,7 @@
 }
 
 @media (max-width: 576px){
+
   .header{
     height: 8rem;
     .navbar{
@@ -72,38 +81,105 @@
       
     }
   
-    .logo{
-      width: 4rem;
-      height: 4rem;
-    }
   }
 }
 
 @media (max-width: 425px){
   .header{
-    height: 8rem;
     .navbar{
-      position: relative;
-
       .search-champs{
-        position: relative;
-        background-color: $main-color;
-        .search-button{
-          font-size: 1.1rem;
-          padding: .2rem .5rem ;
-        }
-
         #champs-input.active{
-          visibility: visible;
           width: 14rem;
         }
       }
-      
+    }
+  }
+
+  #error-champ-not-found-message,#error-message{
+    height:80vh;
+    bottom: 0;
+  }
+
+  .container{
+  
+    .champs-divs{
+      width: 18rem;
+      height: 25rem;
+      background-color: $box-color;
+  
+      .champ-images{
+        width: 100%;
+        height: 13rem;
+      }
+  
+      .text-div-content{
+        
+        h3{
+          font-size: 2rem
+        }
+  
+        figcaption{
+          font-size: 1rem
+        }
+      }
+  
+      .see-more-button{
+        width: 12rem;
+        height: 2.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px){
+  .header{
+    .navbar{
+      .search-champs{
+        #champs-input.active{
+          width: 14rem;
+        }
+      }
+    }
+  }
+
+  #error-champ-not-found-message,#error-message{
+    height:80vh;
+    bottom: 0;
+  }
+
+  .container{
+    top: 7.5rem;
+    #headline-text{
+      font-size: 2.5rem;
     }
   
-    .logo{
-      width: 4rem;
-      height: 4rem;
+    .champs-divs{
+      width: 13rem;
+      height: 17rem;
+      background-color: $box-color;
+  
+      .champ-images{
+        width: 100%;
+        height: 10rem;
+      }
+  
+      .text-div-content{
+        padding-bottom: 0rem !important;
+        h3{
+          font-size: 1.5rem
+        }
+  
+        figcaption{
+          font-size: .75rem
+        }
+      }
+  
+      .see-more-button{
+        width: 7rem;
+        height: 1.75rem;
+        font-size: .75rem;
+      }
     }
   }
 }
