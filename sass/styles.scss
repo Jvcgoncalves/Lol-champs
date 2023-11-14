@@ -1,0 +1,13 @@
+// Variables
+
+@import "variables/colors.scss";
+@import "variables/fonts.scss";
+@import "variables/mixins.scss";
+
+// Pages
+
+@import "pages/home.scss";
+
+// Responsiveness
+
+@import "mobile_pages/home.scss"

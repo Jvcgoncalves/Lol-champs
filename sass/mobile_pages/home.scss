@@ -1,0 +1,109 @@
+@media (min-width: 1441px){
+
+  #all-champs{
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .container{
+    #all-champs{
+      justify-content: center !important;
+    }
+  }
+
+  .header{
+
+    .navbar{
+      .search-champs{
+        
+        .search-button{
+          font-size: 1rem;
+          padding: .2rem .5rem ;
+        }
+  
+        .search-champs-input{
+          width: 18rem;
+          height: 2.3rem;
+        }
+      }
+      
+    }
+  
+    .logo{
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+
+@media (max-width: 576px){
+  .header{
+    height: 8rem;
+    .navbar{
+      position: relative;
+
+      .search-champs{
+        position: relative;
+        background-color: $main-color;
+        .search-button{
+          font-size: 1.1rem;
+          padding: .2rem .5rem ;
+        }
+  
+        .search-champs-input{
+          position: absolute;
+          width: 0;
+          overflow: hidden;
+          visibility: hidden;
+          height: 2rem;
+          right: 1.3rem;
+          top: 2.7rem;
+          transition: .3s;
+        }
+
+        #champs-input.active{
+          visibility: visible;
+          width: 18rem;
+        }
+      }
+      
+    }
+  
+    .logo{
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+
+@media (max-width: 425px){
+  .header{
+    height: 8rem;
+    .navbar{
+      position: relative;
+
+      .search-champs{
+        position: relative;
+        background-color: $main-color;
+        .search-button{
+          font-size: 1.1rem;
+          padding: .2rem .5rem ;
+        }
+
+        #champs-input.active{
+          visibility: visible;
+          width: 14rem;
+        }
+      }
+      
+    }
+  
+    .logo{
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
