@@ -1,3 +1,4 @@
+import { addSeeMoreButtons } from "./informationsAboutChamps.js";
 import { addFormSearch } from "./searchChampions.js";
 import { typingSearch } from "./typing_Search.js";
 
@@ -55,7 +56,7 @@ async function loadChampions(){
 
   toggleLoader()
 
-  const allChamps = await fetch('http://ddragon.leagueoflegends.com/cdn/13.20.1/data/en_US/champion.json').then(response=>{
+  const allChamps = await fetch('https://ddragon.leagueoflegends.com/cdn/13.22.1/data/en_US/champion.json').then(response=>{
       return response.json()
   }).catch(e =>{
     toggleLoader()
@@ -75,6 +76,7 @@ export async function start(){
   toggleLoader()
   addFormSearch()
   typingSearch()
+  await addSeeMoreButtons()
 }
 
 export function toggleLoader(){

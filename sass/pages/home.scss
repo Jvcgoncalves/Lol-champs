@@ -130,4 +130,42 @@ body{
       @include font-styles($main-font, 1.25rem ,#fff); // font config
     }
   }
+
+}
+
+#background-div{
+  min-height: 100vh;
+  background-color: #22222293;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+
+  button.close-information-button{
+    position: absolute;
+    color: $bg-color;
+    font-size: 2rem;
+    top: 1.5rem;
+    right: 2rem;
+  }
+
+  #content-div{
+    max-width: 80%;
+    min-height: 100vh;
+    top: 0;
+    background-color: $main-color;
+    color: $bg-color;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: max-content;
+    gap: .5rem 1rem;
+    
+    #champ-image{
+      width: 9rem;
+      height: 9rem;
+    }
+    #title_name{
+      width: 100%;
+    }
+    
+  }
 }

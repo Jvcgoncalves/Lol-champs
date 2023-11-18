@@ -129,9 +129,42 @@ body {
   color: #fff;
 }
 
+#background-div {
+  min-height: 100vh;
+  background-color: rgba(34, 34, 34, 0.5764705882);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+}
+#background-div button.close-information-button {
+  position: absolute;
+  color: #e2e2e2;
+  font-size: 2rem;
+  top: 1.5rem;
+  right: 2rem;
+}
+#background-div #content-div {
+  max-width: 80%;
+  min-height: 100vh;
+  top: 0;
+  background-color: #091428;
+  color: #e2e2e2;
+  grid-template-columns: 1fr 3fr;
+  grid-auto-rows: max-content;
+  gap: 0.5rem 1rem;
+}
+#background-div #content-div #champ-image {
+  width: 9rem;
+  height: 9rem;
+}
+#background-div #content-div #title_name {
+  width: 100%;
+}
+
 @media (min-width: 1441px) {
-  #all-champs {
-    justify-content: center;
+  .container #all-champs {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 1124px) {
@@ -154,6 +187,21 @@ body {
   .header .logo {
     width: 4rem;
     height: 4rem;
+  }
+  #background-div button.close-information-button {
+    font-size: 1.5rem;
+    top: 1rem;
+    right: 1rem;
+  }
+  #background-div #content-div {
+    gap: 1rem;
+  }
+  #background-div #content-div #champ-image {
+    width: 8rem;
+    height: 8rem;
+  }
+  #background-div #content-div section p {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 576px) {
@@ -184,6 +232,29 @@ body {
   .header .navbar .search-champs #champs-input.active {
     visibility: visible;
     width: 18rem;
+  }
+  #background-div button.close-information-button {
+    font-size: 1.5rem;
+    top: 1rem;
+    right: 1rem;
+  }
+  #background-div #content-div {
+    max-width: 100%;
+    overflow-y: auto;
+    gap: 0.5rem 1rem;
+  }
+  #background-div #content-div p {
+    font-size: 0.9rem;
+  }
+  #background-div #content-div #title_name p {
+    font-size: 1rem;
+  }
+  #background-div #content-div #champ-image {
+    width: 6rem;
+    height: 6rem;
+  }
+  #background-div #content-div section p {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 425px) {

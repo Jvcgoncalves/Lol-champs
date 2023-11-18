@@ -1,6 +1,8 @@
-import { allChampsJSON, start, toggleLoader,createElement } from "./getChamps.js"
+import { allChampsJSON, toggleLoader,createElement } from "./getChamps.js"
+import { addSeeMoreButtons } from "./informationsAboutChamps.js"
 
-const form = document.getElementById('search-champ-form')
+
+export const form = document.getElementById('search-champ-form')
 
 // Function to search for a champ by name
 export async function searchForChampions(name){
@@ -8,6 +10,11 @@ export async function searchForChampions(name){
   toggleLoader()
 
   return allChampsJSON.find(champion => champion.id === name)
+}
+
+export function testForm(event){
+  event.preventDefault()
+  console.log('a')
 }
 
 export async function addFormSearch(){
@@ -25,6 +32,7 @@ export async function addFormSearch(){
         await createElement(element)
       })
 
+      await addSeeMoreButtons()
       return
     } 
 
@@ -38,8 +46,8 @@ export async function addFormSearch(){
       const champion = await searchForChampions(form_input)
   
       await createElement(champion)
+      addSeeMoreButtons()
       
-
     } catch (e){
       
       toggleChampNotFoundMessage()

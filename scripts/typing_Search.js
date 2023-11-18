@@ -1,4 +1,5 @@
 import { allChampsJSON, createElement, toggleLoader } from "./getChamps.js"
+import { addSeeMoreButtons } from "./informationsAboutChamps.js"
 import { excludeContent, formatChampName, searchForChampions, toggleChampNotFoundMessage } from "./searchChampions.js"
 
 export function typingSearch(){
@@ -12,8 +13,10 @@ export function typingSearch(){
   
       if(await searchForChampions(input_value)){
         createElement(await searchForChampions(input_value))
-        
       } 
+
+      await addSeeMoreButtons()
+
     } catch (e){
 
       toggleChampNotFoundMessage()
@@ -23,8 +26,8 @@ export function typingSearch(){
  
       if(!document.querySelector('.champs-divs') && document.querySelector('#error-champ-not-found-message.hide')) toggleChampNotFoundMessage()
       
-      console.log(e.target.value)
     }
+    
   })
 }
 

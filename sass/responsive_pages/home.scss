@@ -1,7 +1,9 @@
 @media (min-width: 1441px){
 
-  #all-champs{
-    justify-content: center;
+  .container{
+    #all-champs{
+      grid-template-columns: repeat(4,1fr);
+    }
   }
 
 }
@@ -45,6 +47,31 @@
       height: 4rem;
     }
   }
+
+  #background-div{
+  
+    button.close-information-button{
+      font-size: 1.5rem;
+      top: 1rem;
+      right: 1rem;
+    }
+  
+    #content-div{
+      gap: 1rem;
+      
+      #champ-image{
+        width: 8rem;
+        height: 8rem;
+      }
+      
+      section{
+        
+        p{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 576px){
@@ -81,6 +108,42 @@
       
     }
   
+  }
+
+  #background-div{
+    button.close-information-button{
+      font-size: 1.5rem;
+      top: 1rem;
+      right: 1rem;
+    }
+  
+    #content-div{
+      max-width: 100%;
+      overflow-y: auto;
+      gap: .5rem 1rem;
+
+      p{
+        font-size: .9rem;
+      }
+
+      #title_name{
+        p{
+          font-size: 1rem;
+        }
+      }
+
+      #champ-image{
+        width: 6rem;
+        height: 6rem;
+      }
+      
+      section{
+        
+        p{
+          font-size: .8rem;
+        }
+      }
+    }
   }
 }
 
