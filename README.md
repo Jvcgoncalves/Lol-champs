@@ -23,7 +23,7 @@ Techs i used to develop this project
 
 ### 1 - When you access, you will see the main page, which just show the current time
 
-![image](https://github.com/Jvcgoncalves/relogio-config/assets/127047416/39c6f2cb-3dc5-4cd3-bf98-caf64b85b224)
+![image](https://github.com/Jvcgoncalves/Lol-champs/assets/127047416/5f5df025-fa3f-464e-beb6-125633806927)
 
 ### 2 - At the top you have a navigation bar.
 
