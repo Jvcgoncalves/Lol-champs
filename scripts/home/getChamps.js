@@ -5,6 +5,7 @@ import { typingSearch } from "./typing_Search.js";
 export let allChampsJSON = null
 
 export async function createElement(champ){
+  console.log(champ)
   if(document.querySelector('div[data-champ-id]')) {
     if(document.querySelector('div[data-champ-id]').dataset.champId === champ.id) return
   } 

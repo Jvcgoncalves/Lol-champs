@@ -1,0 +1,90 @@
+#return-to-home-page{
+  border-color: $second-color;
+  @include font-styles($main-font, 2.2rem ,$bg-color);
+  &:hover{
+    color: $second-color;
+  }
+  color: $second-color;
+}
+
+.d-grid{
+  grid-template-columns: repeat(2,1fr);
+  .champ-main-info{
+    background-color: $box-color;
+    max-width: 100%;
+    // grid to maniluplate the elements more easily
+    grid-template-areas: 
+    'champ_image champ_title_and_name'
+    'champ_dependencies champ_dependencies';
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: max-content;
+
+    #champ-img{ // Champ image
+      grid-area: champ_image;
+      width: 9rem;
+      height: 9rem;
+      background-size: contain;
+      box-shadow:  .1rem .1rem 1rem $main-color;    
+    }
+    .champ-name-title-div{ // Champ name and title div
+      grid-area: champ_title_and_name;
+      max-width: 100%;
+      #champ-name{
+        @include font-styles($second-font, 2.5rem ,$font-color);  // font config
+      }
+    
+      #champ-title{
+        @include font-styles($main-font, 1.2rem ,$font-color);  // font config
+      }
+    }
+
+    .champ-stats{
+      grid-area: champ_dependencies;
+      @include font-styles($main-font, 1.2rem ,$font-color);
+    }
+  
+}
+
+  .champ-extra-info{
+    
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+    background-color: $second-color;
+    max-height: 4.5rem;
+    overflow: hidden;
+    transition: max-height 1.5s ease;
+    cursor: pointer;
+
+    .h3{
+      @include font-styles($second-font, 2.2rem ,$font-color);  
+      display: grid;
+      grid-template-columns: 1fr auto;
+      
+      &::after{
+        content: '';
+        background: url('../../images/chevron-down.svg');
+        height: 2rem;
+        width: 2rem;
+        align-self: center;
+        justify-self: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: .5s;
+      }
+    }
+
+    p{
+      @include font-styles($main-font, 1.2rem ,$font-color);  
+      white-space: pre-line;
+    }
+
+    &.active{
+      max-height:100% ;
+
+      .h3::after{
+        rotate: -180deg;
+      }
+    }
+  }
+}

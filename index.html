@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Scripts -->
-    <script type="module" src="scripts/index.js" defer></script>
+    <script type="module" src="scripts/home/index.js" defer></script>
 
     <title>Lol Info</title>
 </head>
@@ -38,9 +38,9 @@
         <p id="champ-not-found">Campeão não encontrado</p>
     </div> 
     <!-- Page header -->
-    <header class="header d-flex justify-content-center ">
+    <header class="header d-flex justify-content-center">
         <nav class="navbar d-flex justify-content-between align-items-center">
-            <img class="logo" src="images/League of Legends.svg" alt="logo lol">
+            <a href="index.html"><img class="logo" src="images/League of Legends.svg" alt="logo lol"></a>
             <!-- Form to search champs by name -->
             <form id="search-champ-form" class="search-champs d-flex gap-3 pe-4 align-items-center desktop">
                 <input id="champs-input" autocomplete="off" type="text" class="search-champs-input form-control" type="search" placeholder="Procure um campeão...">
@@ -51,7 +51,7 @@
         </nav> 
     </header>
     <!-- At this container are all the main content  -->
-    <div class="container d-flex flex-column align-items-center py-4 pb-5">
+    <div class="container d-flex flex-column align-items-center py-4">
         <h2 class="text-center mb-4" id="headline-text">Lol Info</h2>
         <div id="all-champs" class="d-grid justify-content-center gap-3">
 

@@ -1,0 +1,181 @@
+@media (min-width: 1441px){
+  #return-to-home-page{
+    border-width: .15rem;
+    font-size: 1.3rem;
+  }
+
+  .d-grid{
+    .champ-main-info{
+      grid-template-columns: 1fr 5fr;
+  
+      #champ-img{ // Champ image
+        width: 11rem;
+        height: 11rem;  
+      }
+      .champ-name-title-div{ // Champ name and title div
+        max-width: 100%;
+        #champ-name{
+          font-size: 3.5rem 
+        }
+      
+        #champ-title{
+          font-size: 1.7rem 
+        }
+      }
+  
+      .champ-stats{
+        font-size: 1.7rem
+      }    
+  }
+  
+    .champ-extra-info{
+      max-height: 5.1rem;
+      transition: max-height 1.5s ease;  
+  
+      .h3{
+        font-size: 2.7rem; 
+        
+        &::after{
+          height: 2.7rem;
+          width: 2.7rem;
+        }
+      }
+  
+      p{
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1124px){
+  .d-grid{
+    grid-template-columns: 1fr;
+    .champ-main-info{
+      grid-template-columns: 1fr 5fr;
+  
+      #champ-img{ // Champ image
+        width: 8rem;
+        height: 8rem;  
+      }
+      .champ-name-title-div{ // Champ name and title div
+        #champ-name{
+          font-size: 2.8rem;
+        }
+      
+        #champ-title{
+          font-size: 1.4rem;
+        }
+      }
+  
+      .champ-stats{
+        font-size: 1.35rem
+      }
+    
+  }
+  
+    .champ-extra-info{
+  
+      .h3{
+        font-size: 2rem;
+        
+        &::after{
+          height: 1.7rem;
+          width: 1.7rem;
+        }
+      } 
+    }
+  }
+}
+
+@media (max-width: 425px){
+  .container{
+    #headline-text{
+      font-size: 2.5rem;
+    }
+  }
+
+  .d-grid{
+    .champ-main-info{
+      #champ-img{ // Champ image
+        width: 6rem;
+        height: 6rem;  
+      }
+      .champ-name-title-div{ // Champ name and title div
+        #champ-name{
+          font-size: 2rem;
+        }
+      
+        #champ-title{
+          font-size: 1rem;
+        }
+      }
+  
+      .champ-stats{
+        font-size: 1rem
+      }
+    
+  }
+  
+    .champ-extra-info{
+      max-height: 3.5rem;
+  
+      .h3{
+        font-size: 1.4rem;
+        
+        &::after{
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+      } 
+    }
+  }
+}
+
+@media (max-width: 360px){
+  #return-to-home-page{
+    font-size: .8rem;
+    
+  }
+
+  .d-grid{
+    .champ-main-info{
+      #champ-img{ // Champ image
+        width: 4rem;
+        height: 4rem;  
+      }
+      .champ-name-title-div{ // Champ name and title div
+        
+
+        #champ-name{
+          font-size: 1.7rem;
+        }
+      
+        #champ-title{
+          font-size: .8rem;
+        }
+      }
+  
+      .champ-stats{
+        font-size: .9rem;
+        img{
+          width: 3rem;
+        }
+      }
+    
+  }
+  
+    .champ-extra-info{
+      max-height: 3.5rem;
+  
+      .h3{
+        font-size: 1.2rem;
+        
+        &::after{
+          height: 1.2rem;
+          width: 1.2rem;
+        }
+      } 
+    }
+  }
+}

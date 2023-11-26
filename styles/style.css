@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Oswald:wght@500&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,10 +7,26 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
   background-color: #e2e2e2;
   position: relative;
+}
+
+.container {
+  max-width: 90%;
+  position: relative;
+  top: 6.5rem;
+}
+
+#headline-text {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  color: #222;
+  background: linear-gradient(180deg, #785A28 0%, #C89B3C 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 ::-webkit-scrollbar {
@@ -80,20 +97,6 @@ body {
   height: 5rem;
 }
 
-.container {
-  max-width: 90%;
-  position: relative;
-  top: 6.5rem;
-}
-.container #headline-text {
-  font-family: "Oswald", sans-serif;
-  font-size: 3rem;
-  color: #222;
-  background: linear-gradient(180deg, #785A28 0%, #C89B3C 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .container #all-champs {
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
@@ -160,6 +163,95 @@ body {
 }
 #background-div #content-div #title_name {
   width: 100%;
+}
+
+#return-to-home-page {
+  border-color: #c89b3c;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 2.2rem;
+  color: #e2e2e2;
+  color: #c89b3c;
+}
+#return-to-home-page:hover {
+  color: #c89b3c;
+}
+
+.d-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.d-grid .champ-main-info {
+  background-color: #D9D9D9;
+  max-width: 100%;
+  grid-template-areas: "champ_image champ_title_and_name" "champ_dependencies champ_dependencies";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: max-content;
+}
+.d-grid .champ-main-info #champ-img {
+  grid-area: champ_image;
+  width: 9rem;
+  height: 9rem;
+  background-size: contain;
+  box-shadow: 0.1rem 0.1rem 1rem #091428;
+}
+.d-grid .champ-main-info .champ-name-title-div {
+  grid-area: champ_title_and_name;
+  max-width: 100%;
+}
+.d-grid .champ-main-info .champ-name-title-div #champ-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  color: #222;
+}
+.d-grid .champ-main-info .champ-name-title-div #champ-title {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.2rem;
+  color: #222;
+}
+.d-grid .champ-main-info .champ-stats {
+  grid-area: champ_dependencies;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.2rem;
+  color: #222;
+}
+.d-grid .champ-extra-info {
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  background-color: #c89b3c;
+  max-height: 4.5rem;
+  overflow: hidden;
+  transition: max-height 1.5s ease;
+  cursor: pointer;
+}
+.d-grid .champ-extra-info .h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  color: #222;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.d-grid .champ-extra-info .h3::after {
+  content: "";
+  background: url("../../images/chevron-down.svg");
+  height: 2rem;
+  width: 2rem;
+  align-self: center;
+  justify-self: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.5s;
+}
+.d-grid .champ-extra-info p {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1.2rem;
+  color: #222;
+  white-space: pre-line;
+}
+.d-grid .champ-extra-info.active {
+  max-height: 100%;
+}
+.d-grid .champ-extra-info.active .h3::after {
+  rotate: -180deg;
 }
 
 @media (min-width: 1441px) {
@@ -322,6 +414,132 @@ body {
     width: 7rem;
     height: 1.75rem;
     font-size: 0.75rem;
+  }
+}
+@media (min-width: 1441px) {
+  #return-to-home-page {
+    border-width: 0.15rem;
+    font-size: 1.3rem;
+  }
+  .d-grid .champ-main-info {
+    grid-template-columns: 1fr 5fr;
+  }
+  .d-grid .champ-main-info #champ-img {
+    width: 11rem;
+    height: 11rem;
+  }
+  .d-grid .champ-main-info .champ-name-title-div {
+    max-width: 100%;
+  }
+  .d-grid .champ-main-info .champ-name-title-div #champ-name {
+    font-size: 3.5rem;
+  }
+  .d-grid .champ-main-info .champ-name-title-div #champ-title {
+    font-size: 1.7rem;
+  }
+  .d-grid .champ-main-info .champ-stats {
+    font-size: 1.7rem;
+  }
+  .d-grid .champ-extra-info {
+    max-height: 5.1rem;
+    transition: max-height 1.5s ease;
+  }
+  .d-grid .champ-extra-info .h3 {
+    font-size: 2.7rem;
+  }
+  .d-grid .champ-extra-info .h3::after {
+    height: 2.7rem;
+    width: 2.7rem;
+  }
+  .d-grid .champ-extra-info p {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1124px) {
+  .d-grid {
+    grid-template-columns: 1fr;
+  }
+  .d-grid .champ-main-info {
+    grid-template-columns: 1fr 5fr;
+  }
+  .d-grid .champ-main-info #champ-img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .d-grid .champ-main-info .champ-name-title-div #champ-name {
+    font-size: 2.8rem;
+  }
+  .d-grid .champ-main-info .champ-name-title-div #champ-title {
+    font-size: 1.4rem;
+  }
+  .d-grid .champ-main-info .champ-stats {
+    font-size: 1.35rem;
+  }
+  .d-grid .champ-extra-info .h3 {
+    font-size: 2rem;
+  }
+  .d-grid .champ-extra-info .h3::after {
+    height: 1.7rem;
+    width: 1.7rem;
+  }
+}
+@media (max-width: 425px) {
+  .container #headline-text {
+    font-size: 2.5rem;
+  }
+  .d-grid .champ-main-info #champ-img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .d-grid .champ-main-info .champ-name-title-div #champ-name {
+    font-size: 2rem;
+  }
+  .d-grid .champ-main-info .champ-name-title-div #champ-title {
+    font-size: 1rem;
+  }
+  .d-grid .champ-main-info .champ-stats {
+    font-size: 1rem;
+  }
+  .d-grid .champ-extra-info {
+    max-height: 3.5rem;
+  }
+  .d-grid .champ-extra-info .h3 {
+    font-size: 1.4rem;
+  }
+  .d-grid .champ-extra-info .h3::after {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+@media (max-width: 360px) {
+  #return-to-home-page {
+    font-size: 0.8rem;
+  }
+  .d-grid .champ-main-info #champ-img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .d-grid .champ-main-info .champ-name-title-div #champ-name {
+    font-size: 1.7rem;
+  }
+  .d-grid .champ-main-info .champ-name-title-div #champ-title {
+    font-size: 0.8rem;
+  }
+  .d-grid .champ-main-info .champ-stats {
+    font-size: 0.9rem;
+  }
+  .d-grid .champ-main-info .champ-stats img {
+    width: 3rem;
+  }
+  .d-grid .champ-extra-info {
+    max-height: 3.5rem;
+  }
+  .d-grid .champ-extra-info .h3 {
+    font-size: 1.2rem;
+  }
+  .d-grid .champ-extra-info .h3::after {
+    height: 1.2rem;
+    width: 1.2rem;
   }
 }
 

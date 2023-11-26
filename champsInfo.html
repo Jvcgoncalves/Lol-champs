@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Custom css -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/informationsPage/champsInfoIndex.js" defer></script>
+
+    <title>Lol Info</title>
+</head>
+
+<body>
+    <!-- Loader to show user to wait while content is loading-->
+    <div id="loader" class="spinner-border-div d-flex justify-content-center align-items-center hide">
+        <div class="spinner-border text-warning " role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <!-- Error message if something go wrong -->
+    <div id="error-message" class="d-flex justify-content-center align-items-center hide">
+        <p id="error-text" >Não foi possível carregar o conteúdo :(</p>
+    </div> 
+    <!-- Champ not found message -->
+    <div id="error-champ-not-found-message" class="d-flex justify-content-center align-items-center hide">
+        <p id="champ-not-found">Campeão não encontrado</p>
+    </div> 
+
+    <header class="header d-flex justify-content-center ">
+      <nav class="navbar d-flex justify-content-between align-items-center">
+        <a href="index.html"><img class="logo" src="images/League of Legends.svg" alt="logo lol"></a>
+          <!-- Form to search champs by name -->
+          <a href="index.html" id="return-to-home-page" ><i class="bi bi-arrow-left-circle-fill"></i></a>
+      </nav> 
+  </header>
+
+  <div class="container py-4">
+    <h2 class="h2 text-center mb-4" id="headline-text">Informações do campeão</h2>
+    <div class="d-grid gap-3">
+      <!-- Initial info, name, title and image -->
+      <div class="champ-main-info d-grid row-gap-4 column-gap-3 p-3 rounded">
+        <!-- Champ image -->
+        <img id="champ-img" class="rounded" src="" alt="">
+        <!-- champ name and title div to use d-flex -->
+        <div class="champ-name-title-div">
+          <h3 id="champ-name"></h3>
+          <span id="champ-title"></span>
+        </div>
+        <div class="champ-stats d-flex flex-column gap-2">
+          <!-- Champ dependenci to use spells -->
+          <div class="champ-stats-item">
+            <span>
+              Utiliza:
+            </span>
+            <span id="champ-dependencies">
+            </span>
+          </div>
+          <!-- Champ style, like a mage, tank... -->
+          <div class="champ-stats-item">
+            <span>
+              Estilo do campeão:
+            </span>
+            <span id="champ-type">
+            </span>
+          </div>
+          <!-- Champ spells -->
+          <div class="champ-stats-item skills-div d-flex flex-column gap-2 mt-4">
+            <h4>
+              Habilidades do campeão
+            </h4>
+            <!-- passive -->
+            <div>
+              <img src="" alt="">
+              <span>
+
+              </span>
+              <p class="mt-2">
+
+              </p>
+            </div>
+            <!-- ability Q -->
+            <div>
+              <img src="" alt="">
+              <span>
+
+              </span>
+              <p class="mt-2">
+
+              </p>
+            </div>
+            <!-- ability W -->
+            <div>
+              <img src="" alt="">
+              <span>
+
+              </span>
+              <p class="mt-2">
+
+              </p>
+            </div>
+            <!-- ability E -->
+            <div>
+              <img src="" alt="">
+              <span>
+
+              </span>
+              <p class="mt-2">
+
+              </p>
+            </div>
+            <!-- ability R -->
+            <div>
+              <img src="" alt="">
+              <span>
+
+              </span>
+              <p class="mt-2">
+
+              </p>
+            </div>
+            <!-- Champ spells end -->
+          </div>
+        </div>
+      </div>
+      <!-- Champ history (lore) -->
+
+      <div class="extra-info d-flex row-gap-3 flex-column">
+        <section class="champ-extra-info d-grid gap-2 p-3 rounded">
+          <h3 class="h3">
+            História do campeão
+          </h3>
+          <p id="champ-lore">
+          </p>
+        </section>
+        <section class="champ-extra-info d-grid gap-2 p-3 rounded">
+          <h3 class="h3">
+            Dicas para jogar com
+          </h3>
+          <p id="champ-allytips">
+          </p>
+        </section>
+        <section class="champ-extra-info d-grid gap-2 p-3 rounded">
+          <h3 class="h3">
+            Dicas para jogar contra
+          </h3>
+          <p id="champ-enemytips">
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

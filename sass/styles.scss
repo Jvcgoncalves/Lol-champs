@@ -4,10 +4,17 @@
 @import "variables/fonts.scss";
 @import "variables/mixins.scss";
 
+// Common format between pages
+
+@import "variables/common.scss";
+
 // Pages
 
 @import "pages/home.scss";
+@import "pages/champsInfo.scss";
+
 
 // Responsiveness
 
-@import "responsive_pages/home.scss"
+@import "responsive_pages/home.scss";
+@import "responsive_pages/champsInfo.scss";

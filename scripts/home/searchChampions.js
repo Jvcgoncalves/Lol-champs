@@ -8,7 +8,6 @@ export const form = document.getElementById('search-champ-form')
 export async function searchForChampions(name){
     
   toggleLoader()
-
   return allChampsJSON.find(champion => champion.id === name)
 }
 
@@ -44,7 +43,7 @@ export async function addFormSearch(){
       const form_input = await formatChampName(document.getElementById('champs-input').value)
   
       const champion = await searchForChampions(form_input)
-  
+      console.log(champion)
       await createElement(champion)
       addSeeMoreButtons()
       
@@ -69,12 +68,13 @@ export async function formatChampName(name){
   let string = name.toLowerCase()
   string = string.replace(/^\s+|\s+$/g, '')
   string = string.replace(/'/g, ' ')
-
+  console.log(string)
   if(string.match(/\s/)){
     let letterToReplace = string.match(/\s(\w)/)[1]
 
     string = string.replace(letterToReplace,letterToReplace.toUpperCase())
   }
+  console.log((string.charAt(0).toUpperCase() + string.slice(1)).replace(/\s/,''))
 
   return (string.charAt(0).toUpperCase() + string.slice(1)).replace(/\s/,'')
 }

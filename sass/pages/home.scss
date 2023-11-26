@@ -1,16 +1,3 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body{
-  min-height: 100vh;
-  width: 100%;
-  background-color: $bg-color;
-  position: relative;
-}
-
 // Scroll-bar
 ::-webkit-scrollbar {
   width: 12px;
@@ -85,14 +72,6 @@ body{
 }
 
 .container{ // main container with all champs
-  max-width: 90%;
-  position: relative;
-  top: 6.5rem;
-
-  #headline-text{ // site name 
-    @include font-styles($second-font, 3rem ,$font-color);  // font config
-    @include font-gradient(90deg , #785A28, 0%, #C89B3C, 100%) // gradient
-  }
 
   #all-champs{
     width: 100%;
