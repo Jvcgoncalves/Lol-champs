@@ -1,5 +1,4 @@
 import { start } from "./getChamps.js";
-require('../../styles/style.css')
 
 start()
 
