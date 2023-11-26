@@ -2,8 +2,6 @@ import { getChampInformation } from "./getChamp.js";
 
 export async function createChampElement(){
   const champ_info = await getChampInformation()
-
-  console.log(champ_info)
   
   document.getElementById('champ-name').textContent = champ_info.champName
 
@@ -50,7 +48,7 @@ export async function createChampElement(){
         element.childNodes[5].textContent= `Descrição da habilidade:\n ${champ_info.spells[3].description}`
       break;
     }
-  })
+  }) 
 
   document.getElementById('champ-allytips').textContent = champ_info.allytips.reduce((finalText, currentText,index)=>{
     finalText += `Dica ${index+1}: ${currentText}\n\n`

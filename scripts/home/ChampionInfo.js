@@ -3,7 +3,7 @@ import { toggleLoader } from "./getChamps.js"
 
 class ChampionInfo {
   constructor (champ_id){
-    console.log(champ_id)
+
     // Champ image
     this.image = `https://ddragon.leagueoflegends.com/cdn/13.22.1/img/champion/${champ_id.image.full}`
     
@@ -82,6 +82,6 @@ export async function getChampInfo(name){
 
   const champ_info = new ChampionInfo(Object.values(champ_data.data)[0])
   localStorage.setItem('champ-information',JSON.stringify(champ_info))
-  console.log(new ChampionInfo(Object.values(champ_data.data)[0]))
+
   toggleLoader()
 }
